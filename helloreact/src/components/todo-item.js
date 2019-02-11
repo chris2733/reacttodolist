@@ -12,7 +12,9 @@ export class TodoItem extends Component {
     return (
       <div className="todo-item" style={this.getStyle()}>
         <h4>
-          <input type="checkbox" onChange={this.props.markComplete.bind(this,  id)} />
+          <input
+            type="checkbox"
+            onChange={this.props.markComplete.bind(this, id)} />
           { title }
           <button onClick={this.props.buttTodo.bind(this,id)}>X</button>
         </h4>
