@@ -10,7 +10,7 @@ export class TodoItem extends Component {
   render() {
     const { classN, content, title } = this.props.todo;
     return (
-      <div className="todo-item">
+      <div className="todo-item" style={this.getStyle()}>
         <h3>{title}</h3>
         <button
           className={classN} >
