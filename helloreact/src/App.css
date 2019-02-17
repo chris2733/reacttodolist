@@ -29,12 +29,26 @@ h1, h2, h3, h4, h5, h6, p {
   background: #282c34;
   color: #e0e0e0;
 }
+.todo-item-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: flex-start;
+}
 .todo-item {
+  /* display: inline-block; */
+  width: 100%;
   padding: 10px 15px 10px 10px;
   background: rgb(162, 255, 138);
   color: rgb(14, 0, 38);
   transition: all 0.3s ease;
   position: relative;
+  box-sizing: border-box;
+}
+@media (min-width: 576px) {
+  .todo-item {
+    width: 50%;
+  }
 }
 .todo-item input {
   margin: 0 10px 0 0;
@@ -51,4 +65,11 @@ h1, h2, h3, h4, h5, h6, p {
   border: none;
   outline: none;
   color: #fff;
+}
+.filterbuttons {
+  display: inline-block;
+  background: rgb(120, 190, 255);
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
 }
