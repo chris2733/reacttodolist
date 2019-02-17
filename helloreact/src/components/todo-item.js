@@ -4,21 +4,20 @@ import PropTypes from 'prop-types';
 export class TodoItem extends Component {
   getStyle = () => {
     return {
-      textDecoration: this.props.todo.completed ? "line-through" : "none",
       display: this.props.todo.hidden ? "none" : "",
     }
   }
   render() {
-    const { id, title } = this.props.todo;
+    const { classN, content, title } = this.props.todo;
     return (
-      <div className="todo-item" style={this.getStyle()}>
-        <h4>
-          <input
-            type="checkbox"
-            onChange={this.props.markComplete.bind(this, id)} />
-          { title }
-          <button onClick={this.props.buttTodo.bind(this,id)}>X</button>
-        </h4>
+      <div className="todo-item">
+        <h3>{title}</h3>
+        <button
+          className={classN} >
+          {content}
+        </button>
+        <h4>Codepen Link</h4>
+        <a href="#nogo" className="codepenlink">Not yet m8</a>
       </div>
     )
   }
